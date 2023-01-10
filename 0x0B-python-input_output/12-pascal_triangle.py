@@ -1,33 +1,17 @@
 #!/usr/bin/python3
+""" Module for pascal triangle """
+
+
 def pascal_triangle(n):
-    """ Function that returns the pascal triangle
-
-    Args:
-        n: number of lines
-
-    Returns:
-        matrix: a matrix with the pascal triangle
-
-    """
-
-    matrix = []
-    prev = []
-
-    if n <= 0:
-        return []
-
-    for i in range(n):
-        res_list = []
-        p1 = -1
-        p2 = 0
-        for j in range(len(prev) + 1):
-            if p1 == -1 or p2 == len(prev):
-                res_list += [1]
+    """ Pascal triangle """
+    tri = []
+    ini = 1
+    for i in range(0, n):
+        rows = []
+        for j in range(0, i + 1):
+            if i == 0 or j == 0 or (i > 0 and j == i):
+                rows.append(ini)
             else:
-                res_list += [prev[p1] + prev[p2]]
-            p1 += 1
-            p2 += 1
-        matrix.append(res_list)
-        prev = res_list[:]
-
-    return matrix
+                rows.append(tri[i - 1][j] + tri[i - 1][j - 1])
+        tri.append(rows)
+    return tri
