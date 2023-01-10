@@ -1,6 +1,16 @@
 #!/usr/bin/python3
+"""
+Rectangle Object Below
+"""
+
+
 Rectangle = __import__('9-rectangle').Rectangle
 
+
+
+"""
+Square Class Below
+"""
 
 class Square(Rectangle):
     """ Class that defines a Square from Rectangle class """

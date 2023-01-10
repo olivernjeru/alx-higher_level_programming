@@ -1,4 +1,9 @@
 #!/usr/bin/python3
+"""
+MyInt Class Below
+"""
+
+
 class MyInt(int):
     """ Class that inherits from class int"""
 
