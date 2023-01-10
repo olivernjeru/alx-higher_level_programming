@@ -2,6 +2,10 @@
 """ Module to print status code """
 import sys
 
+"""
+Magic Class Below
+"""
+
 
 class Magic:
     """ Class to generates instances with dict and size"""
@@ -32,6 +36,10 @@ class Magic:
         for key in sorted(self.dic.keys()):
             if self.dic[key] is not 0:
                 print("{}: {:d}".format(key, self.dic[key]))
+
+"""
+Driver Code
+"""
 
 
 if __name__ == "__main__":
