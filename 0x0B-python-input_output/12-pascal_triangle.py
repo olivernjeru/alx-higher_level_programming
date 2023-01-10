@@ -13,6 +13,9 @@ def pascal_triangle(n):
     matrix = []
     prev = []
 
+    if n <= 0:
+        return []
+
     for i in range(n):
         res_list = []
         p1 = -1
