@@ -11,7 +11,7 @@ if __name__ == '__main__':
 
     cur = db.cursor()
     cur.execute("SELECT * \
-    FROM states \
+    FROM hbtn_0e_0_usa \
     WHERE CONVERT(`name` USING Latin1) \
     COLLATE Latin1_General_CS \
     LIKE 'N%';")
