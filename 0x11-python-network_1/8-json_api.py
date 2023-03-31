@@ -15,10 +15,10 @@ if __name__ == "__main__":
     except:
         pass
 
-    r = requests.post('http://0.0.0.0:5000/search_user', data)
+    q = requests.post('http://0.0.0.0:5000/search_user', data)
 
     try:
-        json_o = r.json()
+        json_o = q.json()
         if not json_o:
             print("No result")
         else:
